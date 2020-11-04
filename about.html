@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FISCH - More About Me</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicomatic/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicomatic/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicomatic/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicomatic/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicomatic/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicomatic/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicomatic/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicomatic/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <script src="https://draze.fr/js/localization.js"></script>
+        <script src="https://qfisch.fr/js/header.js" defer></script>
+        <script src="https://qfisch.fr/js/load.js" defer></script>
+        <script>
+            initLocalization(['fr', 'en'], 'en');
+
+            function toggleLanguage() {
+                setLanguage((currentLanguage == "en") ? "fr" : "en");
+                reloadLocalization();
+            }
+        </script>
+        <script>
+            //sessionStorage.setItem('headerStatus', status.CLOSE);
+        </script>
+    </head>
+
+    <body onload="hideLoadingScreen(); reloadLocalization();">
+        <script>
+            initLocalization(['fr', 'en'], 'en');
+
+            function toggleLanguage() {
+                setLanguage((currentLanguage == "en") ? "fr" : "en");
+                reloadLocalization();
+            }
+        </script>
+        <div class="loading" id="loading">
+            <div class="container">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+            </div>
+        </div>
+        <header>
+            <div class='headerAlign'>
+                <!-- <a class='logo' href="https://bitarrays.fr/" target="_blank"><img src="LogoSite.png"></a> -->
+                <locale lang="en">
+                    <img src="img/fr.png" alt="" onclick="toggleLanguage()" class="language" style='margin-left: 0; margin: 20px 0;'>
+                </locale>
+                <locale lang="fr">
+                    <img src="img/en.png" alt="" onclick="toggleLanguage()" class="language" style='margin-left: 0; margin: 20px 0;'>
+                </locale>
+                <ul id="pages-default" class="hidden">
+                    <li><a href="index.html">
+                        <locale lang="en">Home</locale>
+                        <locale lang="fr">Accueil</locale>
+                    </a></li>
+                    <li><a href="projects.html">
+                        <locale lang="en">Projects</locale>
+                        <locale lang="fr">Projets</locale>
+                    </a></li>
+                    <li><a class="active" href="#">
+                        <locale lang="en">About</locale>
+                        <locale lang="fr">À propos</locale>
+                    </a></li>
+                    <li><a href="contact.html">
+                        <locale lang="en">Contact</locale>
+                        <locale lang="fr">Contact</locale>
+                    </a></li>
+                    <li>
+                        <locale lang="en">
+                            <img src="img/fr.png" alt="" onclick="toggleLanguage()" class="language">
+                        </locale>
+                        <locale lang="fr">
+                            <img src="img/en.png" alt="" onclick="toggleLanguage()" class="language">
+                        </locale>
+                    </li>
+                </ul>
+                <a onclick="toggleHeader();" class="hover-cursor"><i class="fa fa-align-right fa-2x" style="color: white;" id='headerSwaper'></i></a>
+            </div>
+            <div id='headerdiv'>
+                <a href="index.html">
+                    <locale lang="en">Home</locale>
+                    <locale lang="fr">Accueil</locale>
+                    <locale class="backtext" lang="en">Home</locale>
+                    <locale class="backtext" lang="fr">Accueil</locale>
+                    <hr>
+                </a>
+                <a href="projects.html">
+                    <locale lang="en">Projects</locale>
+                    <locale lang="fr">Projets</locale>
+                    <locale class="backtext" lang="en">Projects</locale>
+                    <locale class="backtext" lang="fr">Projets</locale>
+                    <hr>
+                </a>
+                <a class="active" href="#">
+                    <locale lang="en">About</locale>
+                    <locale lang="fr">À propos</locale>
+                    <locale class="backtext" lang="en">About</locale>
+                    <locale class="backtext" lang="fr">À propos</locale>
+                    <hr class="active">
+                </a>
+                <a href="contact.html">
+                    <locale lang="en">Contact</locale>
+                    <locale lang="fr">Contact</locale>
+                    <locale class="backtext" lang="en">Contact</locale>
+                    <locale class="backtext" lang="fr">Contact</locale>
+                    <hr>
+                </a>
+                </li>
+            </div>
+            <div class='main'>
+                <div class="title">
+                    <h1>
+                        <locale lang="en">More about me</locale>
+                        <locale lang="fr">Plus à propos de moi</locale>
+                    </h1>
+                </div>
+
+                <div class="button">
+                    <div class="btn-orga">
+                        <a href="#cv" class="btn">
+                            <locale lang="en">My CV</locale>
+                            <locale lang="fr">Mon CV</locale>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content" id="cv" style="padding-top: 40px; height: fit-content; padding-bottom: 40px; max-height: none;"> 
+                <h2 style="font-size: 40px;">CV</h2>
+                <div style="position: relative; left: 50%; transform: translateX(-50%); border-top: 1px solid white; margin-top: 10px; width: 7%; padding-bottom: 20px;"></div>
+                <object data="CV_Quentin_FISCH.pdf" type="application/pdf" class="objet-cv"><p>Impossible de lire le pdf</p></object>
+        </div>
+
+        <div class="content-passion">
+            <h2 style="font-size: 40px; color: white; text-align: center; padding-top: 20px; margin-top: 10px;">
+                <locale lang="fr">Expériences professionelles</locale>
+                <locale lang="en">Professional experiences</locale>
+            </h2>
+            <div style="position: relative; left: 50%; transform: translateX(-50%); border-top: 1px solid white; margin-top: 10px; width: 7%; padding-bottom: 20px;"></div>
+            <div class="speat-exp" style="margin-bottom: 60px;">
+                <div class="speat-title">
+                    <div class="arrange">
+                        <h2>SERPOLLET</h2>
+                        <div style="position: relative; left: 50%; transform: translateX(-50%); border-top: 1px solid white; margin-top: 10px; width: 10%; padding-bottom: 10px;"></div>
+                        <p>
+                            <locale lang="en">Electrician assistant - Temp work - 2 weeks</locale>
+                            <locale lang="fr">Electricien assistant - Intérimaire - 2 semaines</locale>
+                        </p>
+                        <img src="img/serpollet.jfif">
+                    </div>
+                </div>
+                <div class="speat-presentation">
+                    <p>
+                        <locale lang="en">From August 10 to 21, 2020, I carried out an interim assignment for two weeks as an electrician assistant, having no qualification in this field.<br>
+                            <br>
+                        This mission allowed me to learn a lot about the electrician trade, the way a small building site is managed, as well as many things in electricity. In particular, I was able to better understand how the public lighting network of a municipality works, how to apprehend a failure and find a solution, and above all to learn the steps to replace the entire public lighting system with more modern lighting.<br>
+                        <br>
+                        Indeed, the site on which we worked during these two weeks aimed to replace all the public lighting of a municipality with more recent LED lighting. To do so, I was first able to participate in the laying and pulling of new cables in order to be able to supply the new lighting, then to put the new lamps on the existing masts.<br>
+                        <br>
+                        This mission did not improve my skills in the IT field, but it allowed me to leave this environment and discover new horizons.
+                        </locale>
+                        <locale lang="fr">Du 10 au 21 août 2020, j'ai réalisé une mission d'intérim pendant deux semaines en tant qu'assistant électricien, n'ayant pas de qualification dans ce domaine.<br>
+                        <br>
+                        Cette mission m'a permis d'apprendre beaucoup sur le métier d'électricien, la façon dont un petit chantier est géré, ainsi que de nombreuses choses en électricité. J'ai notamment pu mieux comprendre comment fonctionne le réseau d'éclairage public d'une commune, comment appréhender une panne et trouver une solution, et surtout apprendre les étapes pour remplacer tout le système d'éclairage public vers un éclairage plus moderne.<br>
+                        <br>
+                        En effet, le chantier sur lequel nous avons travaillé durant ces deux semaines avait pour objectif de remplacer tous les luminaires publics d'une commune par un éclairage à LED plus récent. Pour se faire, j'ai d'abord pu participer à la pose et au tirage de nouveaux câbles afin de pouvoir alimenter le nouvel éclairage, pour ensuite poser les nouvelles lampes sur les mâts existants.<br>
+                        <br>
+                        Cette mission ne pas permis d'améliorer mes compétences dans le domaine informatique, mais elle m'a permis de sortir de ce milieu et de découvrir de nouveaux horizons.
+                        </locale>
+                    </p>
+                </div>
+            </div>
+
+            <div class="speat-exp">
+                <div class="speat-title">
+                    <div class="arrange">
+                        <h2>SPEAT</h2>
+                        <div style="position: relative; left: 50%; transform: translateX(-50%); border-top: 1px solid white; margin-top: 10px; width: 10%; padding-bottom: 10px;"></div>
+                        <p>
+                            <locale lang="en">WEBMASTER - Intership - 1 month</locale>
+                            <locale lang="fr">WEBMASTER - Stage - 1 mois</locale>
+                        </p>
+                        <img src="img/LogoSpeat.png">
+                    </div>
+                </div>
+                <div class="speat-presentation">
+                    <p>
+                        <locale lang="en">From June 29 to July 31, 2020, I had the opportunity to work as an intern in a small Start-up, called EasTechnology.  <br>
+                            <br>
+                        This internship being my first experience in IT, I learned a lot about the functioning of such a group and the necessary organization. In addition, this internship was carried out by telework, which gives a new dimension to this special experience. <br>
+                        <br>
+                        Associated with the web development of the company based on the development of a mobile application (SPEAT, of which I am not allowed to reveal the subject), I discovered the functioning of WordPress, which to me. At first seemed much more complex than the classic HTML and CSS, but which I was able to get used to quickly. I made a large part of the current <a href="https://speat.fr/" target="blank">website</a>, while following the guidelines set by the company. <br>
+                        <br>
+                        Subsequently, I was able to work on a very interesting part of web development. Indeed, I produced two pages of statistics allowing customers who have subscribed to a certain program to have a better vision of their business thanks to precise data. These statistics that I was able to display were retrieved from information from a Firebase database, which I had the opportunity to discover its downs. <br>
+                        <br>
+                        This internship allowed me to improve my skills in JavaScript, PHP, HTML / CSS and to discover Firebase and WordPress.
+                        </locale>
+                        <locale lang="fr">Du 29 juin au 31 juillet 2020, j'ai eu l'occasion de travailler en tant que stagiaire au sein d'une petite Start-up, dénommée EasTechnology. <br>
+                            <br>
+                        Ce stage étant ma première expérience en informatique, j'y ai appris beaucoup sur le fonctionnement d'un tel groupe et de l'organisation nécessaire. De plus, ce stage était réalisé en télétravail, ce qui donne encore une nouvelle dimension à cette expérience spéciale. <br>
+                        <br>
+                        Associé au développement Web de l'entreprise basée sur le développement d'une application mobile (SPEAT, dont je n'ai pas le droit de dévoiler le sujet), j'ai découvert le fonctionnement de WordPress, qui m'a tout d'abord paru bien plus complexe que les classiques HTML et CSS, mais auquel j'ai su m'habituer rapidement. J'ai réalisé une grande partie du <a href="https://speat.fr/" target="blank">site web</a> actuel, tout en suivant les directives établies par l'entreprise. <br>
+                        <br>
+                        Par la suite, j'ai pu travailler sur une partie très intéressante du développement web. En effet, j'ai réalisé deux pages de statistiques permettamt aux clients ayant souscrit à un certain programme d'avoir une meilleure vision de leur business grâce à des datas précises. Ces statistiques que j'ai pu affichées étaient récupérées à partir d'informations d'une base de données Firebase, dont j'ai eu l'occasion de découvrir ses travers. <br>
+                        <br>
+                        Ce stage m'a ainsi permis d'améliorer mes capacités en JavaScript, PHP, HTML/CSS et de découvrir Firebase et WordPress.
+                        </locale>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="text">
+                <p>Physic is great...</p>
+                <div class="socials">
+                    <ul>
+                        <li><a href="https://github.com/QuentinFISCH" target="_blank"><i class="fab fa-github" style="width: 40px; height: 40px;"></i></a></li>
+                        <li><a href="https://discordapp.com/channels/@me/Scout.ALLO#0705" target="_blank"><i class="fab fa-discord" style="width: 40px; height: 40px;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

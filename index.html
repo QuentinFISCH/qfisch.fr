@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FISCH - Home</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicomatic/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicomatic/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicomatic/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicomatic/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicomatic/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicomatic/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicomatic/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicomatic/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <script src="https://draze.fr/js/localization.js"></script>
+        <script src="https://qfisch.fr/js/header.js" defer></script>
+        <script src="https://qfisch.fr/js/load.js" defer></script>
+        <script>
+            initLocalization(['fr', 'en'], 'en');
+
+            function toggleLanguage() {
+                setLanguage((currentLanguage == "en") ? "fr" : "en");
+                reloadLocalization();
+            }
+        </script>
+        <script>
+            //sessionStorage.setItem('headerStatus', status.CLOSE);
+        </script>
+    </head>
+
+    <body onload="hideLoadingScreen(); reloadLocalization();">
+        <script>
+            initLocalization(['fr', 'en'], 'en');
+
+            function toggleLanguage() {
+                setLanguage((currentLanguage == "en") ? "fr" : "en");
+                reloadLocalization();
+            }
+        </script>
+        <div class="loading" id="loading">
+            <div class="container">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+            </div>
+        </div>
+        <header>
+            <div class='headerAlign'>
+                <!-- <a class='logo' href="https://bitarrays.fr/" target="_blank"><img src="LogoSite.png"></a> -->
+                <locale lang="en">
+                    <img src="img/fr.png" alt="" onclick="toggleLanguage()" class="language" style='margin-left: 0; margin: 20px 0;'>
+                </locale>
+                <locale lang="fr">
+                    <img src="img/en.png" alt="" onclick="toggleLanguage()" class="language" style='margin-left: 0; margin: 20px 0;'>
+                </locale>
+                <ul id="pages-default" class="hidden">
+                    <li><a class="active" href="#">
+                        <locale lang="en">Home</locale>
+                        <locale lang="fr">Accueil</locale>
+                    </a></li>
+                    <li><a href="projects.html">
+                        <locale lang="en">Projects</locale>
+                        <locale lang="fr">Projets</locale>
+                    </a></li>
+                    <li><a href="about.html">
+                        <locale lang="en">About</locale>
+                        <locale lang="fr">À propos</locale>
+                    </a></li>
+                    <li><a href="contact.html">
+                        <locale lang="en">Contact</locale>
+                        <locale lang="fr">Contact</locale>
+                    </a></li>
+                    <li>
+                        <locale lang="en">
+                            <img src="img/fr.png" alt="" onclick="toggleLanguage()" class="language">
+                        </locale>
+                        <locale lang="fr">
+                            <img src="img/en.png" alt="" onclick="toggleLanguage()" class="language">
+                        </locale>
+                    </li>
+                </ul>
+                <a onclick="toggleHeader();" class="hover-cursor"><i class="fa fa-align-right fa-2x" style="color: white; visibility: visible;" id='headerSwaper'></i><i class="fas fa-times" style="color: white; height: 32px; width: 32px; visibility: hidden;" id="headerClose"></i>
+                </a>
+            </div>
+            <div id='headerdiv'>
+                <a class="active" href="#">
+                    <locale lang="en">Home</locale>
+                    <locale lang="fr">Accueil</locale>
+                    <locale class="backtext" lang="en">Home</locale>
+                    <locale class="backtext" lang="fr">Accueil</locale>
+                    <hr class="active">
+                </a>
+                <a href="projects.html">
+                    <locale lang="en">Projects</locale>
+                    <locale lang="fr">Projets</locale>
+                    <locale class="backtext" lang="en">Projects</locale>
+                    <locale class="backtext" lang="fr">Projets</locale>
+                    <hr>
+                </a>
+                <a href="about.html">
+                    <locale lang="en">About</locale>
+                    <locale lang="fr">À propos</locale>
+                    <locale class="backtext" lang="en">About</locale>
+                    <locale class="backtext" lang="fr">À propos</locale>
+                    <hr>
+                </a>
+                <a href="contact.html">
+                    <locale lang="en">Contact</locale>
+                    <locale lang="fr">Contact</locale>
+                    <locale class="backtext" lang="en">Contact</locale>
+                    <locale class="backtext" lang="fr">Contact</locale>
+                    <hr>
+                </a>
+                </li>
+            </div>
+            <div class='main'>
+                
+                <div class="title">
+                    <h1>Quentin FISCH</h1>
+                </div>
+
+                <div class="button">
+                    <div class="btn-orga">
+                        <a href="#intro" class="btn">
+                            <locale lang="en">LEARN MORE</locale>
+                            <locale lang="fr">EN SAVOIR PLUS</locale>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content" id="intro">
+            <div class="subtitle">
+                <locale lang="en">Presentation</locale>
+                <locale lang="fr">Présentation</locale>
+            </div>
+            <div class="stitles" style="width: 20%;"></div>
+            <div class="text">
+                <p style="max-width: 70%; position: relative; left: 50%; transform: translateX(-50%);">
+                    <locale lang="en">
+                    Hello, my name is Quentin FISCH, and I will present you here what is this website about. <br>
+                    I am studying in a french IT engineering school (EPITA), and I thought it will be interesting to create a website to
+                    recap my work thanks to the different projects I am working on. You can find the projects I have done and the ones I am
+                    currently working on with Bitarrays the "<a href="projects.html">Projects</a>" section, by clicking the corresponding button at the top of the page. <br>
+                    You can also learn more about me on the "<a href="about.html">About</a>" page. You will find here more information about my hobbies, my experience
+                    and my diplomas on my CV, posted on this page. <br>
+                    Finally, if you want to contact me for any further information, you can either contact me by email (<a href="mailto:quentin.fisch@epita.fr">quentin.fisch@epita.fr</a>)
+                    or click on <a href="https://github.com/QuentinFISCH" target="_blank">GitHub</a>'s or <a href="https://discordapp.com/channels/@me/Scout.ALLO#0705" target="_blank">Discord</a>'s buttons at the bottom of each page. <br>
+                    </locale>
+                    <locale lang="fr">
+                        Bonjour, je m'appelle Quentin FISCH, et je vais vous présenter ici ce que contient mon site web. <br>
+                        Je suis un étudiant français dans une école d'ingénieur spécialisée en informatique (EPITA), et j'ai pensé qu'il serait intéressant
+                        de créer un site web pour récapituler mon travail grâce aux différents projets sur lesquels je travaille ou j'ai travaillé. Vous pouvez
+                        retrouver les projets que j'ai réalisés et ceux en cours avec Bitarrays dans la section "<a href="projects.html">Projets</a>", en cliquant sur le bouton
+                        correspondant en haut de la page. <br>
+                        Vous pouvez aussi en apprendre plus sur moi sur la page  "<a href="about.html">À propos</a>". Vous y trouverez des informations sur mes passions,
+                        mon experience et mes diplômes sur mon CV, posté sur cette page. <br>
+                        Pour finir, si vous voulez me contacter pour plus d'informations, vous pouvez soit m'envoyer un mail (<a href="mailto:quentin.fisch@epita.fr">quentin.fisch@epita.fr</a>)
+                        soit cliquer sur les boutons de <a href="https://github.com/QuentinFISCH" target="_blank">GitHub</a> ou de <a href="https://discordapp.com/channels/@me/Scout.ALLO#0705" target="_blank">Discord</a> en bas de chaque page. <br>
+                    </locale>
+                </p>
+                <p style="margin-top: 20px; position: relative;">
+                    <locale lang="en">
+                        Have fun visiting !
+                    </locale>
+                    <locale lang="fr">
+                        Bonne visite !
+                    </locale>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="text">
+                <p>Physic is great...</p>
+                <div class="socials">
+                    <ul>
+                        <li><a href="https://github.com/QuentinFISCH" target="_blank"><i class="fab fa-github" style="width: 40px; height: 40px;"></i></a></li>
+                        <li><a href="https://discordapp.com/channels/@me/Scout.ALLO#0705" target="_blank"><i class="fab fa-discord" style="width: 40px; height: 40px;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

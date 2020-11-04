@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>FISCH - My Projects</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicomatic/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicomatic/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicomatic/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicomatic/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicomatic/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicomatic/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicomatic/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicomatic/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="favicomatic/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <script src="https://draze.fr/js/localization.js"></script>
+        <script src="https://qfisch.fr/js/load.js" defer></script>
+        <script>
+            initLocalization(['fr', 'en'], 'en');
+
+            function toggleLanguage() {
+                setLanguage((currentLanguage == "en") ? "fr" : "en");
+                reloadLocalization();
+            }
+        </script>
+        <script>
+            //sessionStorage.setItem('headerStatus', status.CLOSE);
+        </script>
+    </head>
+
+    <body onload="hideLoadingScreen(); reloadLocalization();">
+        <script>
+            initLocalization(['fr', 'en'], 'en');
+
+            function toggleLanguage() {
+                setLanguage((currentLanguage == "en") ? "fr" : "en");
+                reloadLocalization();
+            }
+        </script>
+        <div class="loading" id="loading">
+            <div class="container">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+            </div>
+        </div>
+        <header>
+            <div class='headerAlign'>
+                <!-- <a class='logo' href="https://bitarrays.fr/" target="_blank"><img src="LogoSite.png"></a> -->
+                <locale lang="en">
+                    <img src="img/fr.png" alt="" onclick="toggleLanguage()" class="language" style='margin-left: 0; margin: 20px 0;'>
+                </locale>
+                <locale lang="fr">
+                    <img src="img/en.png" alt="" onclick="toggleLanguage()" class="language" style='margin-left: 0; margin: 20px 0;'>
+                </locale>
+                <ul id="pages-default" class="hidden">
+                    <li><a href="index.html">
+                        <locale lang="en">Home</locale>
+                        <locale lang="fr">Accueil</locale>
+                    </a></li>
+                    <li><a class="active" href="#">
+                        <locale lang="en">Projects</locale>
+                        <locale lang="fr">Projets</locale>
+                    </a></li>
+                    <li><a href="about.html">
+                        <locale lang="en">About</locale>
+                        <locale lang="fr">À propos</locale>
+                    </a></li>
+                    <li><a href="contact.html">
+                        <locale lang="en">Contact</locale>
+                        <locale lang="fr">Contact</locale>
+                    </a></li>
+                    <li>
+                        <locale lang="en">
+                            <img src="img/fr.png" alt="" onclick="toggleLanguage()" class="language">
+                        </locale>
+                        <locale lang="fr">
+                            <img src="img/en.png" alt="" onclick="toggleLanguage()" class="language">
+                        </locale>
+                    </li>
+                </ul>
+                <a onclick="toggleHeader();" class="hover-cursor"><i class="fa fa-align-right fa-2x" style="color: white;" id='headerSwaper'></i></a>
+            </div>
+            <div id='headerdiv'>
+                <a href="index.html">
+                    <locale lang="en">Home</locale>
+                    <locale lang="fr">Accueil</locale>
+                    <locale class="backtext" lang="en">Home</locale>
+                    <locale class="backtext" lang="fr">Accueil</locale>
+                    <hr>
+                </a>
+                <a class="active" href="#">
+                    <locale lang="en">Projects</locale>
+                    <locale lang="fr">Projets</locale>
+                    <locale class="backtext" lang="en">Projects</locale>
+                    <locale class="backtext" lang="fr">Projets</locale>
+                    <hr class="active">
+                </a>
+                <a href="about.html">
+                    <locale lang="en">About</locale>
+                    <locale lang="fr">À propos</locale>
+                    <locale class="backtext" lang="en">About</locale>
+                    <locale class="backtext" lang="fr">À propos</locale>
+                    <hr>
+                </a>
+                <a href="contact.html">
+                    <locale lang="en">Contact</locale>
+                    <locale lang="fr">Contact</locale>
+                    <locale class="backtext" lang="en">Contact</locale>
+                    <locale class="backtext" lang="fr">Contact</locale>
+                    <hr>
+                </a>
+                </li>
+            </div>
+            <div class='main'>
+                <div>
+                    <div class="title">
+                        <h1>
+                            <locale lang="en">My projects</locale>
+                            <locale lang="fr">Mes projets</locale>
+                        </h1>
+                    </div>
+    
+                    <div class="button">
+                        <div class="btn-orga">
+                            <a href="#kk" class="btn" id="marg-right">KubeKing</a>
+                            <a href="#mb" class="btn" id="marg-both">MindBlow</a>
+                            <a href="#ping-pong" class="btn" id="marg-left">
+                                <locale lang="en">Ping-pong balls thrower</locale>
+                                <locale lang="fr">Lanceur de balles de ping-pong</locale>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+
+
+        <div class="latest-projects">
+            <div class="subtitle" style="color: white; text-align: center;">
+                <locale lang="en">Latest news</locale>
+                <locale lang="fr">Dernières nouvautés</locale>
+            </div>
+            <div class="stitles" style="width: 17%; margin-bottom: 20px;"></div>
+            <div class="latest-wrap">
+                <a href="https://qfisch.fr/bet/">
+                    <div class="cube-latest">
+                        <img class="img-background" src="img/bet.jpg">
+                        <locale lang="en"><p class="latest-text">Bet optimisier: bet on both lose and win and never lose money !</p></locale>
+                        <locale lang="fr"><p class="latest-text">Optimisateur de paris: pariez sur la victoire et la défaite sans perdre d'argent !</p></locale>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="content" id="kk">
+            <div class="subtitle">KubeKing</div>
+            <div class="stitles" style="width: 17%;"></div>
+            <div class="Box">
+                <div class="ImgBox">
+                    <a href="https://bitarrays.fr/kk/" target="_blank"><img src="Level3.png" style="border-radius: 20px; box-shadow: 1px 5px 15px rgba(0,0,0,0.5); width: 100%"></a>
+                </div>
+                <div class="ImgContent">
+                    <h2>
+                        <locale lang="en">Brief Presentation</locale>
+                        <locale lang="fr">Présentation rapide</locale>
+                    </h2>
+                    <p>
+                        <locale lang="en">
+                        KubeKing is a 2D platformer game made with Unity. While creating a 3D game for our second semester project (<a href="#mb">MindBlow</a>), my friend <a href="http://draze.fr/" target="_blank">Charles</a> and I
+                        decided to learn how to make a 2D game. It was at first just for fun, but we found a lot of potiential on this little game. In fact, this game
+                        is very fun to play! It is a platformer game containing 10 levels: 8 are free, the other two are available on an in-game store where you can also
+                        buy new characters and items. For each level, you need to find 3 pieces to be able to complete the challenge. The faster you complete a level,
+                        the more pieces you earn. However, you will quickly understand that the mecanisms introduced in the game make some levels very hard to finsih
+                        within a good time. But if you are determinated, try and retry the levels to collect enough pieces to buy shops' items.
+                        Find more information about the game on Bitarrays' website! Click on the image to have access to it. <br>
+                        Have fun !
+                        </locale>
+                        <locale lang="fr">
+                            KubeKing est un jeu de plateformes 2D fait avec Unity. Durant la création d'un jeu 3D pour notre projet de second semestre (<a href="#mb">MindBlow</a>), mon ami <a href="http://draze.fr/" target="_blank">Charles</a> et moi
+                            avons décidé d'apprendre à créer un jeu en 2D. C'était tout d'abord juste pour s'amuser, mais nous avons trouvé un gros potentiel dans ce petit jeu.
+                            En effet, ce jeu est très amusant à jouer! C'est un jeu de plateforme contenant 10 niveaux: 8 sont gratuits, les deux autres seront disponibles dans un
+                            shop intégré au jeu où vous pourrez aussi acheter des nouveaux personnages et items. Pour chaque niveau, vous avez besoin de récupérer 3 pièces pour pouvoir
+                            le compléter. Plus vous terminez un niveau rapidement, plus vous gagnerez de pièces. Cependant, vous allez rapidement vous rendre compte que les mécanismes introduits
+                            dans le jeu rendent certains niveaux très complexes à finir avec un bon temps. Mais si vous êtes déterminés, essayez et réessayez les niveaux pour collecter assez
+                            de pièces et acheter des items du shop. Vous trouverez plus d'informations sur le jeu sur le site de Bitarrays! Cliquez sur l'image pour y accéder. <br>
+                            Amusez-vous ! 
+                        </locale>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="mb">
+            <div class="subtitle">MindBlow</div>
+            <div class="stitles" style="width: 17%;"></div>
+            <div class="Box">
+                <div class="ImgContent" id="mbBox">
+                    <h2>
+                        <locale lang="en">Brief Presentation</locale>
+                        <locale lang="fr">Présentation rapide</locale>
+                    </h2>
+                    <p>
+                        <locale lang="en">
+                        During the second semester of my first year at EPITA, we needed to create a project in either OCaml or C#. My friends and I formed a group of <a href="https://bitarrays.fr/members.html" target="_blank">4 students</a>. We wanted to create a game, which is MindBlow.
+                        The game contains two different modes: solo and cooperation. The solo mode is composed of 8 uniques levels, each more challenging than the previous ones. Find your way
+                        out of a giant medieval castle while resolving mathematics, logic or visualisation based enigmas. <br>
+                        The coop mode is a bit shorter, containing 4 levels. However, if you manage to get out of the prison, you and your mate are communication gods. Test you friendship for free, or discover <a href="#kk">KubeKing</a>! <br>
+                        Find the whole description, screenshots and enigmas'solutions on Bitarrays' website by clicking on the image.
+                        </locale>
+                        <locale lang="fr">
+                            Durant le second semestre de my première année à EPITA, nous devions créer un projet soit en OCaml, soit en C#. Avec mes amis, nous avons formés un groupe de <a href="https://bitarrays.fr/members.html" target="_blank">4 étudiants</a>. Nous voulions créer un jeu, qui est Mindblow.
+                            Le jeu contient deux modes différents: solor et coopération. le mode solo est composé de 8 niveaux uniques, chacun plus difficiles que les ceux d'avant. Retrouvez votre
+                            route à travers un château médiéval géant, tout en résolvant des énigmes mathématiques, logiques ou visuelles. <br>
+                            Le mode coop est un peu plus court, contenant 4 niveaux. Cependant, si vous parvenez à sortir de cette prison, vous et votre partenaires êtes les rois de la communication. Testez votre amitié gratuitement, ou découvrez <a href="#kk">KubeKing</a>! <br>
+                            Retrouvez la description entière, des captures d'écran et les solutions des énigmes sur le site de Bitarrays en cliquant sur l'image.
+                        </locale>
+                    </p>
+                </div>
+                <div class="ImgBox">
+                    <a href="https://bitarrays.fr/mb/" target="_blank"><img src="Level4.png" style="border-radius: 20px; box-shadow: 1px 5px 15px rgba(0,0,0,0.5);"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="ping-pong">
+            <div class="subtitle">
+                <locale lang="en">Ping-pong balls thrower</locale>
+                <locale lang="fr">Lanceur de balles de ping-pong</locale>
+            </div>
+            <div class="stitles" style="width: 35%;"></div>
+                <div class="navbar">
+                    <ul>
+                        <a onclick="slidPage('description');" class="navbutton description active"><li><i class="fas fa-info-circle" style="width: 40px; height: 40px; top: 50%; transform: translateY(25%)"></i></li></a>
+                        <a onclick="slidPage('modelisation');" class="navbutton modelisation"><li><i class="fas fa-cube" style="width: 40px; height: 40px; top: 50%; transform: translateY(25%)"></i></li></a>
+                        <a onclick="slidPage('mecanic');" class="navbutton mecanic"><li><i class= "fas fa-cogs" style="width: 40px; height: 40px; position: relative; top: 50%; transform: translateY(25%);"></i></li></a>
+                    </ul>
+                </div>
+                <div class="windows">
+                    <div class="page activated" id="description">
+                        <h2 style="padding-top: 50px; color: tomato;">Description</h2>
+                        <p style="padding-top: 10px; max-width: 70%; text-align: center; position: relative; left: 50%; transform: translateX(-50%);">
+                            <locale lang="en">
+                            During my last two highschool years, I studied Engineering Sciences. It was one of my favorite courses, therefore, I was very dedicated to each projects
+                            we could possibly do. The final highschool's year, we had to create a project, involving mechanics and electronics. I was in love with the idea, and I grouped
+                            up with two of my friends who where determinated too. Our teacher gave us a project idea, which was to improve a ping-pong balls thrower from the public market.
+                            This public robot was able to shoot balls with only one effect, and couldn't automaticaly change the throwing angle to shoot on different table's parts. So, we
+                            thought it was a good idea to try automate it a bit and add some more features. <br>
+                            We decided to add several shooting effects, such as "normal", "lift" and "shop". Furthermore, we wanted to be able to throw balls on either the forehand, the
+                            backhand or the body of the player. We also wanted to included a moving mechanic to the robot, even if it had not a very important impact on a ball throw: we put
+                            the robot on a rail, permitting it to move to the left or the right of the table. Finally, we added a smash system, where the thrower was enhanced, and the head of
+                            the robot looking down. <br>
+                            Since we did not have time to create a website for this project, a complete presentation of the part I can present can be seen throught the different windows.
+                            <br>
+                            <br>
+                            It was great... <br>
+                            Trust me!
+                            </locale>
+                            <locale lang="fr">
+                                Au cours de mes deux dernières années de lycée, j'ai étudié les sciences de l'ingénieur. C'était l'un de mes cours préférés, donc j'étais très dévoué à chaque projet que
+                                nous pouvions éventuellement faire. La dernière année du lycée, nous avons dû créer un projet impliquant de la mécanique et de l'électronique. J'aimais beaucoup l'idée et je me suis groupé
+                                avec deux de mes amis qui étaient aussi déterminés. Notre professeur nous a donné une idée de projet qui consistait à améliorer un lanceur de balles de ping-pong du marché public.
+                                Ce robot public était capable de tirer des balles avec un seul effet et ne pouvait pas automatiquement changer l'angle de lancement pour tirer sur différentes parties de la table. Alors on a
+                                pensé que c'était une bonne idée d'essayer de l'automatiser un peu et d'ajouter quelques fonctionnalités supplémentaires. <br>
+                                Nous avons décidé d'ajouter plusieurs effets à la balle, tels que "normal", "lift" et "shop". De plus, nous voulions pouvoir lancer des balles sur le coup droit, le
+                                revers ou le corps du joueur. Nous voulions également inclure un mécanicien en mouvement sur le robot, même si cela n'avait pas un impact très important sur un lancer de balle: nous avons mis
+                                le robot sur un rail, lui permettant de se déplacer vers la gauche ou la droite de la table. Enfin, nous avons ajouté un système smash, où le lanceur a été amélioré, et la tête de
+                                le robot regardant vers le bas. <br>
+                                Comme nous n'avons pas eu le temps de créer un site web pour ce projet, une présentation complète de la partie que je peux présenter est visible à travers les différentes fenêtres.
+                                <br>
+                                <br>
+                                It was great... <br>
+                                Trust me!
+                            </locale>
+                        </p>
+                        <div class="img-orga">
+                            <img class="width-32" src="robotAvant.png" id="not-marge-right">
+                            <i class="fas fa-arrow-circle-right rotateMobile" style="color: white; width: 100px; height: 100px;" id="not-marge-right"></i>
+                            <img class="width-32" src="robotChassisApres.png" id="not-marge-right">
+                            <img class="width-25" src="robotHead.jpg">
+                        </div>
+                    </div>
+                    <div class="page" id="modelisation">
+                        <h2 style="padding-top: 50px; color: tomato;">
+                            <locale lang="en">
+                                3D Modelisation
+                            </locale>
+                            <locale lang="fr">
+                                Modélisation 3D
+                            </locale>
+                        </h2>
+                        <div class="boxFake">
+                            <div class="ImgBox">
+                                <img src="robotMarche.png" style="border-radius: 20px; box-shadow: 1px 5px 15px rgba(0,0,0,0.5); width: 70%;">
+                            </div>
+                            <div class="ImgContent">
+                                <p>
+                                    <locale lang="en">
+                                    The image opposite shows the original robot bought in a classic store. The red cercle shows the main part that we modified: the head, which launchs the ball.
+                                    To manage to create and improve everything we planned, we decided to keep the bottom part with the column, where the balls go up. The head is the only part
+                                    of the commercial robot we deleted. In fact, we needed to add a new rolor inside the head, permitting to apply several effects to the ball. Moreover, we needed to computize
+                                    the bending down system, without obstructing the ball passage. <br> <br>
+                                    The next images and comments will present you the different parts of the head, including modeling images and corresponding final results.
+                                    </locale>
+                                    <locale lang="fr">
+                                        L'image ci-contre montre le robot d'origine acheté dans un magasin classique. Le cercle rouge montre la partie principale que nous avons modifiée: la tête, qui lance la balle. 
+                                        Pour réussir à créer et à améliorer tout ce que nous avions prévu, nous avons décidé de garder la partie inférieure avec le colonne, où les balles montent. La tête est la seule partie 
+                                        du robot commercial que nous avons supprimée. En effet, nous devions ajouter un nouveau rouleau à l'intérieur de la tête, permettant d'appliquer plusieurs effets à la balle. De plus, nous devions programmer
+                                        le système d'inclinaison, sans obstruer le passage de la balle. <br> <br>
+                                        Les images et commentaires suivants vous présenteront les différentes parties de la tête, y compris les images de modélisation et les résultats finaux correspondants.
+                                    </locale>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="img-orga-small">
+                            <img class="width-25-small" src="Partie 2.PNG" id="not-marge-right-small">
+                            <img class="width-32-small" src="Pivot tête.PNG" id="not-marge-right-small">
+                            <img class="width-20" src="Connecteur.PNG">
+                        </div>
+                        <div class="stitles" style="border-top: 1px solid tomato; width: 80%;"></div>
+                        <div  class="img-orga-small">
+                            <img class="width-45" src="pieces3D.jpg" id="not-marge-right-small">
+                            <img class="width-20" src="tete assemblée irl.JPG">
+                        </div>
+                        <p style="padding-top: 10px; max-width: 70%; text-align: center; position: relative; left: 50%; transform: translateX(-50%);">
+                            <locale lang="en">
+                                As told in other sections, we also created a rail function: the robot is on a rail and can move from left to right of the table's width. We needed to rebuild the previous
+                                frame, made as a test by other teachers. Therefore, I modeled the frame to fit the rail, and my collegues built it as planned. You can see the results down below, as well
+                                as other modelisation and printed pieces images.
+                            </locale>
+                            <locale lang="fr">
+                                Comme indiqué dans d'autres sections, nous avons également créé une fonction de rail: le robot est sur un rail et peut se déplacer de gauche à droite sur la largeur de la table. Nous devions reconstruire le
+                                chassis précédent, réalisé en tant que test par d'autres enseignants. Par conséquent, j'ai modélisé le chassis pour qu'il s'adapte au rail et mes collègues l'ont construit comme prévu. Vous pouvez également voir les résultats ci-dessous
+                                comme d'autres images de modélisation et de pièces imprimées.
+                            </locale>
+                        </p>
+                        <div class="img-orga-small">
+                            <img class="width-32-small" src="tete et chariot.PNG" id="not-marge-right-small">
+                            <img class="width-20" src="tete.PNG" id="not-marge-right-small">
+                            <img class="width-20" src="Tête moteur.PNG">
+                        </div>
+                        <div class="stitles" style="border-top: 1px solid tomato; width: 80%;"></div>
+                        <div class="img-orga-small">
+                            <img class="width-30" src="chassis.jpg" id="not-marge-right-small">
+                            <img class="width-30" src="ensemble.JPG" id="not-marge-right-small">
+                            <img class="width-20" src="résultat rouleau.jpg">
+                        </div>
+
+                        <button class="explode-btn" id="modelviewer-btn" onclick="enableModelViewer()">View 3D Model</button>
+                    </div>
+                    <div class="page" id="mecanic">
+                        <h2 style="padding-top: 50px; color: tomato;">
+                            <locale lang="en">Mecanical references</locale>
+                            <locale lang="fr">Références mécaniques</locale>
+                        </h2>
+                        <div class="test" style="margin: 20px 0;">
+                            <img class="width-32" src="tempsnip.png" style="box-shadow: 1px 5px 15px rgba(0,0,0,0.5);">
+                            <p class="p-left">
+                                <locale lang="en">
+                                    This section presents the mecanical sumilations we did throught MatLab and Simulink applications. Since I am french, I can not present you an english version
+                                    of the following images, and I want to apoplogize for that, but I think they are still very interesting to take a look at and understand. The next images are zoomed-in
+                                    parts from the image opposite, with corresponding colors for you to better locate on the graph.
+                                </locale>
+                                <locale lang="fr">
+                                    Cette section présente les simulations mécaniques que nous avons effectuées via les applications MatLab et Simulink. Ces images sont plutôt complexe à analyser et comprendre,
+                                    mais je pense qu'elles sont toujours très intéressantes à regarder et à étudier. Les images suivantes sont des
+                                    parties agrandies de l'image ci-contre, avec les couleurs correspondantes pour que vous puissiez mieux les localiser sur le graphique.
+                                </locale>
+                            </p>
+                        </div>
+                        <div class="stitles" style="border-top: 1px solid tomato; width: 80%; margin: 30px 0;"></div>
+                        <div class="test" style="margin: 20px 0;">
+                            <p class="p-right">
+                                <locale lang="en">
+                                    This part represents the calculs regarding the strip on which the carriage moves. We can see that by having the angular rotation w2, we can obtain the linear speed of the strip.
+                                    Then, we take the mass of the robot and associated it with the friction coefficient to have the tangential effort. Not all these values are usefull, but some of them are really
+                                    important to determinate the needed composants' caracteristics. For example, if we add the pulley radius to the previous values, we can determinate the torque needed to move the
+                                    carriage.
+                                </locale>
+                                <locale lang="fr">
+                                    Cette partie représente les calculs concernant la bande sur laquelle se déplace le chariot. Nous pouvons voir qu'en ayant la rotation angulaire w2, nous pouvons obtenir la vitesse linéaire de la bande.
+                                    Ensuite, on prend la masse du robot et on l'associe au coefficient de frottement pour avoir l'effort tangentiel. Toutes ces valeurs ne sont pas utiles, mais certaines sont vraiment
+                                    importantes pour déterminer les caractéristiques des composants nécessaires. Par exemple, si nous ajoutons le rayon de la poulie aux valeurs précédentes, nous pouvons déterminer le couple nécessaire pour déplacer le
+                                    le chariot.
+                                </locale>
+                            </p>
+                            <img class="width-32" src="simul bande.PNG" style="box-shadow: 1px 5px 15px rgba(0,0,0,0.5);">
+                        </div>
+                        <div class="stitles" style="border-top: 1px solid tomato; width: 80%; margin: 30px 0;"></div>
+                        <div class="test" style="margin: 20px 0;">
+                            <p class="p-right">
+                                <locale lang="en">
+                                    Here is the graph corresponding to the motor used to move the robot on the rail. We take the torque from the motor on use several constants to determinate the angular rotation,
+                                    to calculate later the voltage to apply to the motor, in order to move the robot for 1.5m in 2secs.
+                                </locale>
+                                <locale lang="fr">
+                                    Voici le graphique correspondant au moteur utilisé pour déplacer le robot sur le rail. Nous prenons le couple du moteur en utilisant plusieurs constantes pour déterminer la rotation angulaire,
+                                    afin de calculer plus tard la tension à appliquer au moteur, permettant de déplacer le robot sur 1,5 m en 2 secondes.
+                                </locale>
+                            </p>
+                            <img class="width-32" src="simul mcc.PNG" style="box-shadow: 1px 5px 15px rgba(0,0,0,0.5);">
+                        </div>
+                        <div class="stitles" style="border-top: 1px solid tomato; width: 80%; margin: 30px 0;"></div>
+                        <div class="test" style="margin: 20px 0;">
+                            <img class="width-32" src="simul reducteur.PNG" style="box-shadow: 1px 5px 15px rgba(0,0,0,0.5);">
+                            <p class="p-left">
+                                <locale lang="en">
+                                    This part is a bit more complicated, because it involves inertia problems and applications that I do not master. To be quick, we use the motor efficiency and reduction values to
+                                    transform the carriage torque into the motor torque. The yellow part describes the inertia on the motor axe.
+                                </locale>
+                                <locale lang="fr">
+                                    Cette partie est un peu plus compliquée, car elle implique des problèmes d'inertie et des applications que je ne maîtrise pas. Pour être rapide, nous utilisons les valeurs de rendement et de réduction du moteur pour
+                                    transformer le couple du chariot en couple moteur. La partie jaune décrit l'inertie sur l'axe du moteur.
+                                </locale>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        <div id="divCanvas"><button class="not-explode-btn" id="explode-btn" onclick="explodeModel(500)">Explode Model</button></div>
+
+        <div class="footer">
+            <div class="text">
+                <p>Physic is great...</p>
+                <div class="socials">
+                    <ul>
+                        <li><a href="https://github.com/QuentinFISCH" target="_blank"><i class="fab fa-github" style="width: 40px; height: 40px;"></i></a></li>
+                        <li><a href="https://discordapp.com/channels/@me/Scout.ALLO#0705" target="_blank"><i class="fab fa-discord" style="width: 40px; height: 40px;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var allPages = document.getElementsByClassName("page");
+            var navButtons = document.getElementsByClassName("navbutton");
+            function slidPage(name){
+                var e = document.getElementById(name);
+                for (i = 0; i < allPages.length; i++){
+                    allPages[i].className = "page";
+                }
+                var button;
+                for (i = 0; i < navButtons.length; i++) {
+                    var a = navButtons[i].classList;
+                    if (a[1] == name) {
+                        button = navButtons[i];
+                    }
+                    navButtons[i].className = a[0] + ' ' + a[1];
+                }
+                button.className += ' active';
+                e.className = "page activated";
+            };
+        </script>
+
+        <script src="/THREE/js/three.js"></script>
+        <script src="/THREE/js/GLTFLoader.js"></script>
+        <script src="/THREE/js/OrbitControls.js"></script>
+        <script src="/THREE/js/MTLLoader.js"></script>
+        <script src='https://mamboleoo.be/learnThree/demos/OBJLoader.js'></script>
+        <script src="/THREE/js/threex.domevents.js"></script>
+
+
+        <script>
+            var camera, scene, renderer, objet3D;
+            var modelChanging = false;
+            var modelOpen = false;
+
+            function enableModelViewer(){
+                try {
+                    init();
+                    document.getElementById("modelviewer-btn").disabled = true;
+                    document.getElementById("explode-btn").className = "explode-btn";
+                } catch {
+                    window.location.href = 'https://qfisch.fr/index.html';
+                }
+            }
+
+            var mouse = {
+                x: 0,
+                y: 0
+            };
+
+            function init() {
+
+                /* Scene */
+                scene = new THREE.Scene();
+                scene.background = new THREE.Color(0x111111);
+
+                var lightA = new THREE.AmbientLight( 0x404040, 0.5); // soft white light
+                scene.add( lightA );
+
+                var light = new THREE.PointLight(0xB0E5FA, 1.5, 200);
+                light.position.set( -10, -10, 20);
+                light.castShadow = true;
+                light.shadow.camera.near = 0.1;
+                light.shadow.camera.far = 25;
+                scene.add( light );
+
+                var light1 = new THREE.PointLight(0xB0E5FA, 1.5, 200);
+                light1.position.set( 10, -10, -50);
+                light1.castShadow = true;
+                light1.shadow.camera.near = 0.1;
+                light1.shadow.camera.far = 25;
+                scene.add( light1 );
+
+                var light1 = new THREE.PointLight(0xffffff, 1.5, 200);
+                light1.position.set( 30, 30, -10);
+                light1.castShadow = true;
+                light1.shadow.camera.near = 0.1;
+                light1.shadow.camera.far = 25;
+                scene.add( light1 );
+
+                /* Camera */
+                camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 900 );
+                camera.position.x = 0;
+                camera.position.y = 0;
+                camera.position.z = 250;
+                scene.add( camera );
+
+                /* Renderer */
+                renderer = new THREE.WebGLRenderer( { antialias: true } );
+                renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize( window.innerWidth / 2, window.innerHeight / 2 );
+                document.getElementById('divCanvas').appendChild( renderer.domElement );
+
+                /* Controls */
+                var controls = new THREE.OrbitControls( camera, renderer.domElement );
+                controls.enablePan = false;
+                controls.minDistance = 10;
+                controls.maxDistance =80;
+                controls.update();
+
+                window.addEventListener( 'resize', onWindowResize, false );
+
+                /* Loader */
+                var model = new THREE.OBJLoader();
+
+                model.load( '/THREE/Objets/TeteFinal.obj', function ( object ) {
+                    var i = 0;
+                    objet3D = object;
+                    object.position.x = -10;
+                    object.position.y = -10;
+                    object.position.z = -20;
+                    object.scale.set(0.1, 0.1, 0.1);
+                    object.traverse(function (child) { 
+                        if (child instanceof THREE.Mesh) {
+                            child.material.color.setHex(0x888888);
+                        }
+                    });
+                    scene.add(object);
+                });
+
+                render();
+            }
+
+            function explodeModel(limit){
+                if (!modelOpen){
+                    deactivateButton();
+                    var index = 0;
+                    var interval = setInterval(function(){
+                        var i = 0;
+                        objet3D.traverse(function (child) {
+                            if (child instanceof THREE.Mesh) {
+                                if (i == 0){
+                                child.position.z -= 0.1;
+                                }
+                                if (i == 1){
+                                    child.position.x += 0.1;
+                                }
+                                if (i == 2){
+                                    child.position.x += 0.05;
+                                }
+                                if (i == 3){
+                                    child.position.z += 0.15;
+                                }
+                                if (i == 4){
+                                    child.position.z += 0.1;
+                                }
+                                i++;
+                            }
+                        });
+                        index ++;
+                        if (index >= limit){
+                            deactivateButton();
+                            modelOpen = !modelOpen;
+                            stopExplode(interval);
+                        }
+                    }, 20);
+                }
+                else{
+                    deactivateButton();
+                    var index = 0;
+                    var interval = setInterval(function(){
+                        var i = 0;
+                        objet3D.traverse(function (child) {
+                            if (child instanceof THREE.Mesh) {
+                                if (i == 0){
+                                child.position.z += 0.1;
+                                }
+                                if (i == 1){
+                                    child.position.x -= 0.1;
+                                }
+                                if (i == 2){
+                                    child.position.x -= 0.05;
+                                }
+                                if (i == 3){
+                                    child.position.z -= 0.15;
+                                }
+                                if (i == 4){
+                                    child.position.z -= 0.1;
+                                }
+                                i++;
+                            }
+                        });
+                        index ++;
+                        if (index >= limit){
+                            deactivateButton();
+                            modelOpen = !modelOpen;
+                            stopExplode(interval);
+                        }
+                    }, 20);
+                }
+            }
+
+            function stopExplode(interval){
+                clearInterval(interval);
+            }
+
+            var button = document.getElementById("explode-btn");
+
+            function deactivateButton(){
+                button.disabled = !button.disabled;
+                if (button.disabled){
+                    if (button.firstChild.data == "Assemble Model"){
+                        button.firstChild.data = "Explode Model";
+                    }
+                    else{
+                        button.firstChild.data = "Assemble Model";
+                    }
+                }
+            }
+
+            function onWindowResize() {
+                renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+            }
+            
+            function render() {
+                requestAnimationFrame(render);
+                renderer.render( scene, camera );
+            }
+
+        </script>
+        <script src="https://qfisch.fr/js/header.js"></script>
+    </body>
+</html>
