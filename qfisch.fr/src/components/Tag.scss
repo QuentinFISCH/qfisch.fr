@@ -1,0 +1,39 @@
+.tag {
+    display: inline-flex;
+    padding: 4px 8px;
+    align-items: flex-start;
+    border-radius: 3px;
+
+    p {
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    &.blue {
+        background: #A5C8F4;
+    }
+
+    &.green {
+        background: #A5F4A5;
+    }
+
+    &.yellow {
+        background: #F4F1A5;
+    }
+
+    &.orange {
+        background: #F4C1A5;
+    }
+
+    &.purple {
+        background: #D1A5F4;
+    }
+
+    &.red {
+        background: #F4A5A5;
+    }
+
+    &.pink {
+        background: #F4A5C1;
+    }
+}

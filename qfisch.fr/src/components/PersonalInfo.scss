@@ -1,0 +1,24 @@
+.personal-info {
+    width: calc(400px - 6rem);
+    max-width: 30%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #d8d8d8 0%, rgba(229, 229, 229, 0) 94.79%);
+    gap: 40px;
+    position: fixed;
+
+    img {
+        width: 200px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
