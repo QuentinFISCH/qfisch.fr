@@ -74,3 +74,19 @@
         border-radius: 1px;
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .resume {
+        .content {
+            max-width: 90%;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .resume {
+        width: 100vw;
+        margin-left: 0;
+    }
+}

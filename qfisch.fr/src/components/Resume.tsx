@@ -1,4 +1,5 @@
 import ElementHeading from './ElementHeading'
+import PersonalInfo from './PersonalInfo'
 import "./Resume.scss"
 import Tag from './Tag'
 
@@ -12,6 +13,7 @@ export default function Resume() {
                 <p className="title-decorator">
                     Looking for 6 months end-of-study intership starting Feb/Mar 2024
                 </p>
+                <PersonalInfo sidebar={false} />
                 <div className="section">
                     <h1 className="section-title">/* Education */</h1>
                     <div className="element">
@@ -148,7 +150,7 @@ export default function Resume() {
                             <Tag color='purple' text="Scala" />
                             <Tag color='purple' text="Spark" />
                             <Tag color='purple' text="Kafka" />
-                            <Tag color='orange' text="AWS" />
+                            <Tag color='yellow' text="AWS" />
                             <Tag color='blue' text="Docker" />
                             <Tag color='orange' text="Grafana" />
                         </div>
