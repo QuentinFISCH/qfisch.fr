@@ -26,6 +26,7 @@
         align-items: flex-start;
         gap: 35px;
         padding: 3rem 0;
+        width: 100%;
 
         h1.section-title {
             font-size: 30px;
@@ -39,6 +40,7 @@
             border-radius: 15px;
             transition: all 0.2s ease-in-out;
             border: 2px solid transparent;
+            width: calc(100% - 10px);
 
             &:hover {
                 border: 2px solid #2e74b987;
