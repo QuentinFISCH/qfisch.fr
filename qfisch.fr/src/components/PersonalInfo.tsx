@@ -1,11 +1,11 @@
 import "./PersonalInfo.scss"
-import ElementHeading from './ElementHeading'
-import Tag from './Tag'
+import ElementHeading from './ElementHeading.tsx'
+import Tag from './Tag.tsx'
 
 export default function PersonalInfo({ sidebar = true }) {
   return (
     <div className={'personal-info' + (sidebar ? "" : " sidebar")}>
-      <img src="src/assets/PFP.jpeg" alt="pfp" />
+      <img src="/PFP.jpeg" alt="pfp" />
       <div className="info about">
         <ElementHeading title='About' />
         <p>Engineering course specialising in Computer Science with the development of physics knowledge, mathematics, algorithms and fundamentals. AI and Big Data specialisation (Machine Learning, NLP, Computer Vision). Secretary of blockchain and finance association (LaCity) and organizer of competitions and conferences with partners</p>
@@ -14,15 +14,15 @@ export default function PersonalInfo({ sidebar = true }) {
         <ElementHeading title='Contact' />
         <div className='contacts'>
           <div className='link'>
-            <img src="src/assets/github.png" alt="" />
+            <img src="/github.png" alt="" />
             <a href="https://github.com/QuentinFISCH">GitHub</a>
           </div>
           <div className='link'>
-            <img src="src/assets/linkedin.png" alt="" />
+            <img src="/linkedin.png" alt="" />
             <a href="https://www.linkedin.com/in/quentin-fisch/">LinkedIn</a>
           </div>
           <div className='link'>
-            <img src="src/assets/email.png" alt="" />
+            <img src="/email.png" alt="" />
             <a href="mailto:quentin.fisch@epita.fr">Email</a>
           </div>
         </div>

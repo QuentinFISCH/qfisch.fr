@@ -1,5 +1,5 @@
-import PersonalInfo from '../components/PersonalInfo'
-import Resume from '../components/Resume'
+import PersonalInfo from '../components/PersonalInfo.tsx'
+import Resume from '../components/Resume.tsx'
 import "./Home.scss"
 
 export default function Home() {

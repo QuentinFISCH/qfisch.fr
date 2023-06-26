@@ -1,7 +1,7 @@
-import ElementHeading from './ElementHeading'
-import PersonalInfo from './PersonalInfo'
+import ElementHeading from './ElementHeading.tsx'
+import PersonalInfo from './PersonalInfo.tsx'
 import "./Resume.scss"
-import Tag from './Tag'
+import Tag from './Tag.tsx'
 
 export default function Resume() {
     return (
@@ -43,7 +43,7 @@ export default function Resume() {
                 <hr className="separator" />
 
                 <div className="section">
-                    <h1 className="section-title">/* Work experience */</h1>
+                    <h1 className="section-title">// Work experience</h1>
                     <div className="element">
                         <ElementHeading title="Software Engineer @ Alien6" />
                         <p className="context">02/2023 - present • Remote</p>
@@ -114,7 +114,7 @@ export default function Resume() {
                 <hr className="separator" />
 
                 <div className="section">
-                    <h1 className="section-title">/* Projects */</h1>
+                    <h1 className="section-title"># Projects</h1>
                     <div className="element">
                         <ElementHeading title="Transformers + LLM model for tickets classification & fixing time prediction" />
                         <p className="context">End-of-study project • Ongoing</p>

@@ -35,6 +35,15 @@
         div.element {
             display: flex;
             flex-direction: column;
+            padding: 5px;
+            border-radius: 15px;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 2px solid #2e74b987;
+                cursor: pointer;
+            }
 
             p.context {
                 color: rgba(0, 0, 0, 0.60);

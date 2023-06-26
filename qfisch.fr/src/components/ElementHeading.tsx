@@ -1,4 +1,3 @@
-import React from 'react'
 import "./ElementHeading.scss"
 
 export default function ElementHeading({title = 'Title'}) {
