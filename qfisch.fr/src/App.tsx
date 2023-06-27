@@ -1,12 +1,12 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
-import Home from './pages/Home.tsx'
+import AppRoutes from './routes.tsx'
 
 function App() {
-
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <AppRoutes />
+    </Router>
   )
 }
 

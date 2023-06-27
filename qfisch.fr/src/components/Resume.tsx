@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ElementHeading from './ElementHeading.tsx'
 import PersonalInfo from './PersonalInfo.tsx'
 import "./Resume.scss"
@@ -14,31 +15,33 @@ export default function Resume() {
                     Looking for 6 months end-of-study intership starting Feb/Mar 2024
                 </p>
                 <PersonalInfo sidebar={false} />
-                <div className="section">
-                    <h1 className="section-title">/* Education */</h1>
-                    <div className="element">
-                        <ElementHeading title="M.Sc. in Computer Science @ EPITA engineering school" />
-                        <p className="context">2019 - 2024 • Paris, France</p>
-                        <div className="tags">
-                            <Tag color='red' text="GPA: 4.0/4.0" />
+                <Link to="/education/epita">
+                    <div className="section">
+                        <h1 className="section-title">/* Education */</h1>
+                        <div className="element">
+                            <ElementHeading title="M.Sc. in Computer Science @ EPITA engineering school" />
+                            <p className="context">2019 - 2024 • Paris, France</p>
+                            <div className="tags">
+                                <Tag color='red' text="GPA: 4.0/4.0" />
+                            </div>
+                            <ul>
+                                <li>Engineering course specialising in Computer Science with the development of physics knowledge, mathematics, algorithms and fundamentals</li>
+                                <li>AI and Big Data specialisation (Machine Learning, NLP, Computer Vision)</li>
+                                <li>Secretary of blockchain and finance association (LaCity) and organizer of competitions and conferences with partners</li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>Engineering course specialising in Computer Science with the development of physics knowledge, mathematics, algorithms and fundamentals</li>
-                            <li>AI and Big Data specialisation (Machine Learning, NLP, Computer Vision)</li>
-                            <li>Secretary of blockchain and finance association (LaCity) and organizer of competitions and conferences with partners</li>
-                        </ul>
-                    </div>
-                    <div className="element">
-                        <ElementHeading title="Abroad semester in Computer Science @ Czech Technical University Prague" />
-                        <p className="context">02/2021 - 06/2021 • Prague, Czech Republic</p>
-                        <div className="tags">
-                            <Tag color='red' text="GPA: 4.0/4.0" />
+                        <div className="element">
+                            <ElementHeading title="Abroad semester in Computer Science @ Czech Technical University Prague" />
+                            <p className="context">02/2021 - 06/2021 • Prague, Czech Republic</p>
+                            <div className="tags">
+                                <Tag color='red' text="GPA: 4.0/4.0" />
+                            </div>
+                            <ul>
+                                <li>Faculty of Computer Science with courses in artificial intelligence, database, linear algebra, computer architecture and object-oriented programming</li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>Faculty of Computer Science with courses in artificial intelligence, database, linear algebra, computer architecture and object-oriented programming</li>
-                        </ul>
                     </div>
-                </div>
+                </Link>
 
                 <hr className="separator" />
 

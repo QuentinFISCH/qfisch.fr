@@ -37,14 +37,15 @@
             display: flex;
             flex-direction: column;
             padding: 5px;
-            border-radius: 15px;
-            transition: all 0.2s ease-in-out;
-            border: 2px solid transparent;
+            transition: all 0.1s ease-in-out;
+            border: 2px dashed transparent;
             width: calc(100% - 10px);
+            border-radius: 0;
 
             &:hover {
-                border: 2px solid #2e74b987;
                 cursor: pointer;
+                border-left: 2px dashed #ccc;
+                border-right: 2px dashed #ccc;
             }
 
             p.context {
