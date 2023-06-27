@@ -7,14 +7,16 @@ export type DetailsProps = {
   title: string,
   description: string[],
   image: string,
-  company: string,
-  category: string,
-  loc: string,
-  dateStart: string,
-  dateEnd: string,
+  company?: string,
+  category?: string,
+  loc?: string,
+  dateStart?: string,
+  dateEnd?: string,
   grade: boolean,
+  context?: string,
   skills?: [string, string][],
   github?: string,
+  website?: string,
 }
 
 export default function Details(props: DetailsProps) {
@@ -33,7 +35,9 @@ export default function Details(props: DetailsProps) {
         <div className="content">
           <div>
             <h1 className="name">{props.title}</h1>
-            <p className="context">@ {props.company} • in {props.loc} • from <span>{props.dateStart}</span> to <span>{props.dateEnd}</span></p>
+            {
+              !props.context ? <p className="context">@ {props.company} • in {props.loc} • from <span>{props.dateStart}</span> to <span>{props.dateEnd}</span></p> : <p className="context">{props.context}</p>
+            }
           </div>
           {
             props.grade ?
@@ -67,7 +71,7 @@ export default function Details(props: DetailsProps) {
           </div>
 
           {
-            props.github ?
+            props.github || props.website ?
               <div>
                 <ElementHeading title="Links" />
                 <div className="links">
@@ -76,6 +80,14 @@ export default function Details(props: DetailsProps) {
                       <div className='link'>
                         <img src="/github.png" alt="" />
                         <a href={props.github}>GitHub</a>
+                      </div>
+                      : null
+                  }
+                  {
+                    props.website ?
+                      <div className='link'>
+                        <img src="/website.png" alt="" />
+                        <a href={props.website}>Website</a>
                       </div>
                       : null
                   }
