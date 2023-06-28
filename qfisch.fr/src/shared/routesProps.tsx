@@ -100,7 +100,12 @@ export const alien6ProjectManagerSolidityDevProps: DetailsProps = {
 export const pfeeTransformersLLMProps: DetailsProps = {
   title: "Transformers + LLM model for tickets classification & fixing time prediction",
   description: [
-    "TODO (work in progress, sorry)"
+    "The goal of this project is to classify tickets and predict the time to fix them using Transformers and LLM model",
+    "Regarding classification, we will use a transformer model to classify tickets into categories. These categories will be of type: bug, feature, documentation, basic question, etc.",
+    "The classification will be thought of in two separate steps: first, classifying the ticket as soon as it comes through the system, and then, at the end of the month when an employee makes sure that each ticket is in the right category and are solved. Re-classifying at the end of the month will be done with more information than the first classification, since there will be comments, more details, etc. Thus, it will allow a more accurate classification",
+    "Secondly, we will work on a model to predict the time to fix a ticket. We are not sure yet of the technique we will use, since this part will come after the classification process is done",
+    "This project is done in collaboration with Cloud Temple, a company that provides cloud services to its customers, focusing on cybersecurity. Their many clients generate a lot of tickets, and they want to automate the classification and prediction of the time to fix them, allowing them to reduce the SLA (Service Level Agreement) and improve their customer satisfaction",
+    "The project is currently in the early stages of development"
   ],
   image: "cloud-temple.jpg",
   context: "End-of-study project x Cloud Temple • Ongoing",
@@ -112,7 +117,14 @@ export const pfeeTransformersLLMProps: DetailsProps = {
 export const nlpProps: DetailsProps = {
   title: "Various NLP tasks",
   description: [
-    "TODO (work in progress, sorry)"
+    "I have worked through diverse NLP tasks from basic Naive Bayes to Transformers models. In total, I have produced, with two other classmates, 7 labs on NLP tasks that I will detail below. You can find the code on my GitHub linked below",
+    "1. The first lab consists of implementating a Naive Bayes Classifier for the task of sentiment analysis. The dataset is the IMDB dataset, as it will be for a lot of the following labs. We implemented our own Naive Bayes Classifier and compared it to the one from Scikit-Learn. Finally, we improved them by using lemmatization and stemming on the dataset",
+    "2. The second lab consists of implementing a Logistic Regression Classifier for the task of sentiment analysis (same dataset). We implemented our own Logistic Regression Classifier using PyTorch and compared it to the one from Scikit-Learn. We used 3 different ways to generate the features: Pandas, vectorized Numpy arrays and PySpark",
+    "3. One again we worked on a classification task on the IMDB dataset. This time, we used FastText and GloVe embeddings to generate the features.",
+    "4. We implemented our own RNN (Recurrent Neural Network) for the task of sentiment analysis. We used the IMDB dataset and compared our model to another one built using PyTorch. Also, we compared the PyTorch RNN to a PyTorch LSTM (Long Short-Term Memory) one and a BiLSTM (Bidirectional Long Short-Term Memory) one",
+    "5. The fifth lab was about following a PyTorch tutorial to implement a Transformer model to translate English to German. We used the Multi30k dataset. To compute the accuracy of our model, we used the BLEU score",
+    "6. We used transfer learning with the DistilBERT model, a smaller version of BERT, and fine-tune it on the IMDB dataset to perform sentiment analysis",
+    "7. The last lab was more theorical and oriented towards model evaluation and data annotation. We used Roberta on the 'tweet_eval/offensive' dataset."
   ],
   image: "nlp.png",
   context: "School micro-projects",
