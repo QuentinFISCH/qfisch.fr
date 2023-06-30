@@ -32,7 +32,11 @@ export const ctuProps: DetailsProps = {
 
 export const alien6SoftwareEngineerProps: DetailsProps = {
   title: "Software Engineer",
-  description: ["Part-time permanent contract", "Creation of a web platform to generate 100% blockchain based badges for all types of certifications"],
+  description: [
+    "Part-time permanent contract",
+    "Creation of a web platform to generate 100% blockchain based badges for all types of certifications",
+    "Design and implementation of a second platform for artists to manage their collections of badges and sell them on the main platform",
+  ],
   image: "alien6.png",
   company: "Alien6",
   category: "// Work",
@@ -137,7 +141,9 @@ export const nlpProps: DetailsProps = {
 export const dataEngineeringProps: DetailsProps = {
   title: "Data pipeline for live drone data processing",
   description: [
-    "TODO (work in progress, sorry)"
+    "Subject of the project: A country with surveillance drones send a report every minute with a score and other metrics for every individual. If a score is too low, an alert should be sent immediately. Every reports must be saved, to be able to analyse them later",
+    "To solve this problem, we used Kafka to ingest the data, Spark to process it and AWS S3 to store it. We also used Docker to deploy our solution",
+    "This data pipeline is designed to process 200Go of data per day, which will be stored in the data lake",
   ],
   image: "spark.png",
   context: "School project",
@@ -149,7 +155,10 @@ export const dataEngineeringProps: DetailsProps = {
 export const recommenderSystemProps: DetailsProps = {
   title: "Recommender system for food delivery app",
   description: [
-    "TODO (work in progress, sorry)"
+    "As the name indicates, the goal of the project is to create a recommender system for a food delivery app",
+    "The system needs to predict whether a customer at a certain location will order in a restaurant or not. This reduces the problem to a binary classification model",
+    "I used Neural Network Encoding method, which will learn the diverse features from each customers and vendors, to try and predict the best class",
+    "The input data has been purposefully degraded in order to make the problem harder, but I managed to get a F1 score of 74%, which can surely be beaten with more time on the board"
   ],
   image: "tf.png",
   context: "School project",
@@ -162,7 +171,10 @@ export const recommenderSystemProps: DetailsProps = {
 export const tradingBotCompetitionProps: DetailsProps = {
   title: "Trading bot competition - 2nd place out of 100+ teams",
   description: [
-    "TODO (work in progress, sorry)"
+    "I participated in a competition organized by EPITA's finance association, LaCity, and IMC Trading, a trading firm",
+    "The goal of the competition was to create a market making trading bot that would trade on a simulated market, with the goal of maximizing the profit",
+    "The bot was coded in Python in about 3 hours, and was able to make profit on a virtual market",
+    "I finished 2nd out of 100+ teams, and won a 350€ drone as a prize"
   ],
   image: "imc.png",
   context: "Competition by EPITA x IMC Trading",
@@ -174,7 +186,10 @@ export const tradingBotCompetitionProps: DetailsProps = {
 export const sudokuSolverProps: DetailsProps = {
   title: "Sudoku solver (simulated annealing method)",
   description: [
-    "TODO (work in progress, sorry)"
+    "This project was done in the context of a Constraint Programming course. Every group (3 people) had to choose a different method to solve a sudoku, and implement it",
+    "We used the simulated annealing method, which is a method that combines random decisions with a probability to find the best solution",
+    "We implemented a first solution in C#, without any library, and then a second one using the simanneal library in Python",
+    "The simulated annealing method is not the best method to solve a sudoku, but it was a good way to learn about constraint programming and the different methods to solve a sudoku"
   ],
   image: "csharp.png",
   context: "School project",
